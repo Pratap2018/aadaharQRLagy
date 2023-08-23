@@ -27,7 +27,7 @@ export default {
         console.log('process');
          this.processQr(this.imageData)
       }
-    }, 5000)
+    }, 500)
   },
   methods: {
 
@@ -58,14 +58,14 @@ export default {
 
       // draw rectangle on video 
       context.beginPath();
-      context.rect(canvas.width/2 -300,canvas.height/2 -300, 600, 600);
+      context.rect(canvas.width/2 -400,canvas.height/2 -400, 800, 800);
       context.lineWidth = 2;
       context.strokeStyle = 'white';
       context.stroke();
 
 
 
-      const imageData = context.getImageData(canvas.width/2 -299,canvas.height/2 -299,600,600);
+      const imageData = context.getImageData(canvas.width/2 -399,canvas.height/2 -399,800,800);
       // console.log(imageData);
       // every 5 second process qr code non blocking
       this.imageData = imageData;
@@ -95,7 +95,7 @@ export default {
                 focusMode: 'continuous',
                 exposureMode: 'continuous',
                 whiteBalanceMode: 'continuous',
-                zoom: "1.5"
+                zoom: "1"
               }]
             })
           }
